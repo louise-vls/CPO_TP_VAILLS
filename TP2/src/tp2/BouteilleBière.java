@@ -19,9 +19,10 @@ System.out.println("Bouteille de " + nom +" (" + degreAlcool +
  " degres) \nBrasserie : " + brasserie ) ;
 }
 void Décapsuler(){
-    if (ouverte=true){
+    if (ouverte==true){
    System.out.println( "Erreur votre biere est ouverte" ) ; 
 }else{
+    ouverte=true;
     System.out.println(ouverte ) ;  
 }
    
