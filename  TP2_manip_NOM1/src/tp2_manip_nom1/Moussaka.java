@@ -12,5 +12,6 @@ public class Moussaka {
    int nbCalories;
    public Moussaka (int nb){
        nbCalories=nb;
+       
    }
 }
