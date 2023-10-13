@@ -22,18 +22,22 @@ Voiture uneMicra = new Voiture ("Micra", "Nissan", 4 ) ;
 Personne bob = new Personne("Bobby", "Sixkiller");
 Personne reno = new Personne("Reno", "Raines");
 
-bob.ajouterVoiture(uneClio);
-bob.ajouterVoiture(uneAutreClio);
-reno.ajouterVoiture(une2008);
-reno.ajouterVoiture(uneMicra);
-
-
 System.out.println("liste des voitures disponibles "+ uneClio + 
 "\n" + uneAutreClio + "\n" + une2008 + "\n" + uneMicra ) ;
 
-System.out.print("Listes des voitures de bob: "+ bob.liste_voitures);
-System.out.print("Listes des voitures de reno: "+ reno.liste_voitures);
+bob.liste_voitures[0]=uneClio;
+bob.liste_voitures[1]=uneAutreClio;
+reno.liste_voitures[0]=une2008;
+reno.liste_voitures[1]=uneMicra;
 
+
+bob.nbVoitures = 1;
+uneClio.Proprietaire = bob;
+
+System.out.print("La premiere voiture dans la liste de bob est: "+ bob.liste_voitures[0]);
+System.out.print("La deuxieme voiture dans la liste de bob est: "+ bob.liste_voitures[1]);
+System.out.print("La premiere voiture dans la liste de reno est: "+ reno.liste_voitures[0]);
+System.out.print("La deuxieme voiture dans la liste de reno est: "+ reno.liste_voitures[1]);
 
     }
     
