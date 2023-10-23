@@ -20,7 +20,7 @@ public class Epee extends Arme {
            @Override
 public String toString () {
     String chaine;
-    chaine= Nom+""+NiveauAttaque;
+    chaine= Nom+""+NiveauAttaque+""+finesse;
     return chaine;
 }
 }
