@@ -19,7 +19,7 @@ public class Baton extends Arme {
            @Override
 public String toString () {
     String chaine;
-    chaine= Nom+""+NiveauAttaque;
+    chaine= Nom+""+NiveauAttaque+""+Age;
     return chaine;
 }
 }
