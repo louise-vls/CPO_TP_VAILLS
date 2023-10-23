@@ -4,6 +4,7 @@
  */
 package tp3;
 import armes.*;
+import java.util.ArrayList;
 /**
  *
  * @author louis
@@ -18,6 +19,12 @@ public class Tp3 {
         Epee Durandal = new Epee("Durandal",4,7);
         Baton Chene = new Baton("Chêne", 4, 5);
         Baton Charme = new Baton("Charme", 5, 6);
+        
+        ArrayList<Arme> arme= new ArrayList<>();
+        arme.add(Excalibur);
+        arme.add(Durandal);
+        arme.add(Chene);
+        arme.add(Charme);
         
     }
     
