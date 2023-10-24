@@ -4,11 +4,14 @@
  */
 package Personnages;
 import armes.*;
+import EtreVivant.*;
 import java.util.ArrayList;
 /**
  *
  * @author louis
  */
+
+
 public abstract class Personnage {
     static int nombrePersonnages=0;
     int nombreGuerriers=0;
@@ -72,5 +75,36 @@ public String toString () {
 public static int getNombrePersonnages(){
     return nombrePersonnages;
 }
+
+public void seFatiguer(){
+    niveauVie-=10;
     
+}
+ 
+public boolean esVivant(){
+    return niveauVie>0;
+    
+}
+
+public void estAttaque(int points){
+    niveauVie-=points;
+    
+}
+
+public void attaquer(Personnages cible){
+    if (this instanceof Magicien && this.getArmeEnMain() instanceof Baton){
+        int dommages = this.getArmeEnMain().getNiveauAttaque()* ((Baton) this.getArmeEnMain()).getAge();
+        cible.estAttaque(dommages);
+        this.seFatiguer();
+    } else if (this instanceof this.getArmeEnMain() instanceof Epee){
+        int dommages = this.getArmeEnMain().getNiveauAttaque()* ((Epee) this.getArmeEnMain()).getFinesse();
+        cible.estAttaque(dommages);
+        this.seFatiguer();
+    
+    } else {
+        int dommages = (this instanceof Magicien)? 20: 30;
+         cible.estAttaque(dommages);   
+        }
+    
+} 
 }
