@@ -32,25 +32,40 @@ public class Tp3 {
         TabAarme.add(Chene);
         TabAarme.add(Charme);
         
-        Magicien mag1= new Magicien("Gandalf",65,true);
-        Magicien mag2= new Magicien("Garcimore",44,false);
-        Guerrier g1= new Guerrier("Conan",78, false);
-        Guerrier g2= new Guerrier("Lannister",45, true);
+        Magicien magicien= new Magicien("Gandalf",65,true);
         
-        ArrayList<Personnage> personnage=new ArrayList<>();
-        personnage.add(mag1);
-        personnage.add(mag2);
-        personnage.add(g1);
-        personnage.add(g2);
+        Guerrier guerrier= new Guerrier("Conan",78, false);
+       
         
-        for (int i=0;i<personnage.size();i++){
-          System.out.println(Personnage.get(i));
+        /*ArrayList<Personnage> personnage=new ArrayList<>();
+        personnage.add(magicien);
+        personnage.add(guerrier);
+       */
+        guerrier.ajouterArme(Excalibur);
+        guerrier.ajouterArme(Durandal);
+        guerrier.ajouterArme(Chene);
+        
+        guerrier.equipementArme("Excalibure");
+        
+         magicien.ajouterArme(Excalibur);
+        magicien.ajouterArme(Durandal);
+        magicien.ajouterArme(Chene);
+        
+        System.out.println(guerrier);
+        System.out.println(magicien);
+        
+        }  
+    public static int nombreArmePref(Personnage personnage, Class<?> typeArme){
+        int count =0;
+        for (Arme arme : personnage.getInventaire()){
+            if (typeArme.isInstance(arme)){
+                count++;
+            }
+        }
+            return count;
         }
         
-        
-        
-        
-    }
+    
     
     
 }
