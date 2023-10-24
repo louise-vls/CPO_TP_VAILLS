@@ -19,6 +19,9 @@ public class Arme {
        
         
     }
+    public String getNom(){
+        return Nom;
+    }
     
         @Override
 public String toString () {
