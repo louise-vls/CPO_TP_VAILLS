@@ -9,40 +9,58 @@ package celluleLumineuse;
  * @author louis
  */
 public class CelluleLumineuse {
-    boolean allumer;
+    boolean etat;
     
     /**
      * On initialise une nouvelle cellule qui est eteinte
      */
     public CelluleLumineuse(){
-        this.allumer=false;
+        this.etat=false;
   
     }
 
     /**
-     * Allume la cellule
+     * Methode pour activer ou eteindre la cellule en inversant son etat
      */
-    public void allumer(){
-        allumer=true;
+    public void activerCellule(){
+        etat =!etat;
     }
     
     /**
-     * eteint la cellule
+     * eteindre la cellule
      */
     public void eteindre(){
-        allumer=false;
+        etat=false;
     }
+    
+    
+    /**
+     * Verifier que la cellule est eteinte
+     * @return 
+     */
+    public boolean estEteint(){
+       return !etat;
+    }
+    
+    /**
+     * Obtenir l'etat actuel de la cellule
+     * @return L'etat actuel
+     */
+    public boolean getEtat(){
+       return etat;
+    }
+    
     
     /**
      * verifie si la cellule lumineuse est allumee
      * @return la cellule allume dans le cas ou elle est eteinte il retourne false
      */
     public boolean estAllumee(){
-        return allumer;
+        return etat;
     }
     @Override
 public String toString () {
-    return allumer ? "allumée" : "eteint";
+    return (etat) ? "X" : "0";
     
 }
 }
