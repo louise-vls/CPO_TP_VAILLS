@@ -11,11 +11,15 @@ import java.util.Scanner;
 public class Partie {
      GrilleDeJeu grid;
         int nbCoups;
-        public Partie(int nbLignes, int nbColonnes){
-            grid = new GrilleDeJeu(5,5);
+        Niveau niveau;
+        
+        
+        public Partie(Niveau niv){
+            grid = new GrilleDeJeu(3,5);
             nbCoups = 0;
-                    
+            niveau = niv;        
         }
+        
         public void initialiserPartie(){
             grid.melangerMatriceAleatoirement(10);
         }
@@ -45,14 +49,14 @@ public class Partie {
                 grid. activerLigneColonneOuDiagonaleAleatoire();
                 }else{
                     System.out.println("Coup invalide");
-            
+                }
                System.out.println("Coups #" +nbCoups);
                System.out.println(grid);
-           }
+            }
            System.out.println("Bravo vous avez eteint toutes les celules en : "+ nbCoups+ " coups.");
         }
 }}
-}
+
          
         
         
