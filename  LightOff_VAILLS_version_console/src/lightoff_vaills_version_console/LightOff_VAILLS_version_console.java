@@ -14,7 +14,13 @@ public class LightOff_VAILLS_version_console {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Partie jeu = new Partie(10,10);
+        Niveau simple = new Niveau (4,4,11);
+         Niveau moyen = new Niveau (7,7,16);
+         Niveau difficile = new Niveau (10,10,2);
+         
+         Niveau nivPartie= difficile;
+         
+        Partie jeu = new Partie(nivPartie);
         jeu.lancerPartie();
         
         
