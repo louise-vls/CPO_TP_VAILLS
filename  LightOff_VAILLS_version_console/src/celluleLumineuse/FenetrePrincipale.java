@@ -12,7 +12,8 @@ import javax.swing.JButton;
  * @author louis
  */
 public class FenetrePrincipale extends javax.swing.JFrame {
-
+GrilleDeJeu grid;
+int nbCoups; 
     /**
      * Creates new form FenetrePrincipale
      */
@@ -20,12 +21,14 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         initComponents();
       int nbLignes = 10;
 int nbColonnes = 10;
-GrilleDeJeu grid;
-int nbCoups; 
+
 
 this.grid = new GrilleDeJeu(nbLignes, nbColonnes);
 
 PanneauGrille.setLayout(new GridLayout(nbLignes, nbColonnes));
+
+
+ 
 
 
 
