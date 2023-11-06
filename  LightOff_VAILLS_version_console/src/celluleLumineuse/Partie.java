@@ -21,6 +21,7 @@ public class Partie {
         }
         
         public void initialiserPartie(){
+            grid.eteindreToutesLesCellules();
             grid.melangerMatriceAleatoirement(10);
         }
         public void lancerPartie(){
