@@ -18,6 +18,8 @@ GrilleDeJeu grid;
 int nbCoups; 
 int i; 
 
+
+
 public void initialiserPartie() {
  grid.eteindreToutesLesCellules();
  grid.melangerMatriceAleatoirement(10);
@@ -59,6 +61,7 @@ org.netbeans.lib.awtextra.AbsoluteConstraints(110, 70, 1 * 40, nbLignes * 40));
  JButton bouton_ligne = new JButton();
  ActionListener ecouteurClick = new ActionListener() {
  final int j = i;
+ 
  @Override
  public void actionPerformed(ActionEvent e) {
  grid.activerLigneDeCellules(j);
@@ -90,7 +93,10 @@ repaint();
  bouton_colonne.addActionListener(ecouteurClick);
  PanneauBoutonsHorizontaux.add(bouton_colonne);
  
+ 
+ 
  }
+
  
 
 
@@ -139,7 +145,7 @@ initialiserPartie();
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, -1, -1));
 
         jButton2.setText("jButton2");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, -1, -1));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
 
         PanneauBoutonsVerticaux.setBackground(new java.awt.Color(153, 153, 255));
 
