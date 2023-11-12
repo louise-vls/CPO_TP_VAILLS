@@ -3,8 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package celluleLumineuse;
+import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 /**
  *
  * @author louis
@@ -23,7 +26,25 @@ public class CelluleGraphique extends JButton {
  // Methode gérant le dessin de la cellule 
  @Override
  protected void paintComponent(Graphics g) {
- super.paintComponent(g); 
- this.setText(celluleLumineuseAssociee.toString());
+ int w = this.getWidth();
+ int h = this.getHeight();
+ if (celluleLumineuseAssociee.estEteint() == true) {
+ g.setColor(Color.red);
+ } else {
+ g.setColor(Color.yellow);
  }
-}
+ g.fillOval(2, 2, w - 4, h - 4);
+ Image imageADessiner = null;
+ if (celluleLumineuseAssociee.estEteint() == true) {
+ imageADessiner = new ImageIcon("imgAllume.png").getImage();
+ } else {
+ imageADessiner = new ImageIcon("imgEteint.png").getImage();
+ }
+ // Dessin de l'image dans le composant
+ if (imageADessiner != null) {
+ g.drawImage(imageADessiner, 0, 0, this);
+ }
+ }
+ }
+
+
